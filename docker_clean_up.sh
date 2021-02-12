@@ -10,4 +10,3 @@ docker ps -a
 docker images -a
 docker volume ls
 docker network ls
-
