@@ -7,7 +7,9 @@ apt-get clean -y
 apt-get autoremove -y
 apt-get autoclean -y
 
-if which neofetch >/dev/null; then
-  neofetch
+WHICH=$(which fastfetch)
+
+if which fastfetch >/dev/null; then
+  $WHICH
 fi
 
