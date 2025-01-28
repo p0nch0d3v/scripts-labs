@@ -10,8 +10,8 @@ apt-get autoclean -y
 WHICH_FASTFETCH=$(which fastfetch)
 WHICH_NEOFETCH=$(which neofetch)
 
-if $WHICH_FASTFETCH >/dev/null; then
+if [ ! -z $WHICH_FASTFETCH ]; then
   $WHICH_FASTFETCH
-elif $WHICH_NEOFETCH; then
+elif [ ! -z $WHICH_NEOFETCH ]; then
   $WHICH_NEOFETCH
 fi
